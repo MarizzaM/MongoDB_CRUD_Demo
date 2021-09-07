@@ -50,4 +50,11 @@ async function updateCourse(id){
     console.log(course);
 }
 
-updateCourse('61376e270f24413b1e542da8');
+//updateCourse('61376e270f24413b1e542da8');
+
+async function removeCourse(id){
+    const course = await Course.findByIdAndRemove(id);
+    console.log(course);
+}
+
+removeCourse('61376e270f24413b1e542da8');
