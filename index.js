@@ -29,13 +29,3 @@ async function createCourse(){
 }
 
 createCourse();
-
-async function getCourses(){
-    const courses = await Course
-        .find({author: 'Marizza',  isPublished: true})
-        .limit(10)
-        .sort({name: 1});
-    console.log(courses);
-}
-
-getCourses();
